@@ -47,10 +47,12 @@ public class LoginFragment extends Fragment {
     }
 
     private void prepareView() {
+        binding.loading.setVisibility(View.GONE);
         if (loginState == LoginState.LOG_IN) {
             binding.username.setVisibility(View.GONE);
             binding.usernameText.setVisibility(View.GONE);
 
+            binding.titleText.setText(R.string.login);
             binding.loginButton.setText(R.string.action_sign_in);
             binding.signUpButton.setText(R.string.action_sign_up);
             binding.signUpText.setText(R.string.create_account_desc);
@@ -58,6 +60,7 @@ public class LoginFragment extends Fragment {
             binding.username.setVisibility(View.VISIBLE);
             binding.usernameText.setVisibility(View.VISIBLE);
 
+            binding.titleText.setText(R.string.action_sign_up);
             binding.loginButton.setText(R.string.action_sign_up);
             binding.signUpButton.setText(R.string.action_sign_in);
             binding.signUpText.setText(R.string.login_account_desc);
