@@ -115,10 +115,14 @@ public class LoginFragment extends Fragment {
             // TODO: make login call
         }
         // on success operation
+        // TODO: remove
+        onLoginSuccess();
     }
 
     private void onLoginSuccess() {
-        startActivity(new Intent(getActivity(), HomeActivity.class));
+        Intent intent = new Intent(getActivity(), HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
     @Override
