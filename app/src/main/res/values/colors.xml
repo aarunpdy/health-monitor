@@ -13,4 +13,5 @@
     <color name="responseColor">#011936</color>
     <color name="inputColor">#F4FFFD</color>
     <color name="fabIconColor">#FFF</color>
+    <color name="primary_dark">#131313</color>
 </resources>
